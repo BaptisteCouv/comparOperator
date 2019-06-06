@@ -19,6 +19,19 @@
   position: relative;
 }
 
+.cont {
+  color: white;
+}
+.cont-header {
+  color: white;
+}
+.cont-header-menu {
+  background-color: #009847;
+}
+.cont-header-menu-text {
+  color: white;
+}
+
 .text-edit {
   margin-left: 20px;
 }
@@ -31,6 +44,16 @@
 
 .navbar {
   background-color: #6aaa54;
+}
+.navbar-link {
+  color: white;
+  padding: 5px;
+  background-color: #6aaa54;
+}
+.navbar-link:hover {
+  text-decoration: none;
+  color: #4e4e4e;
+  background-color: #cfffd2;
 }
 
 /************** TITLE ***************/

@@ -2,8 +2,17 @@
 include('../layout/bdd.php');
 include('../partials/Destination.php');
 include('../partials/Manager.php');
-?>
+include('../partials/TourOperator.php');
 
+$manager = new Manager($bdd);
+$destinations = $manager->getOperatorByDestination($_GET['tour_operator']);
+foreach ($destinations as $destination) {
+    $operatorName = "operator" . $destination['id_tour_operator'];
+    $location = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['img']);
+    $$operatorName = new TourOperator($destination['id_tour_operator'], $destination['name'], $destination['grade'], $destination['link'], $destination['is_premium']);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -31,6 +40,11 @@ include('../partials/Manager.php');
         </header>
         <h2 class="subtitle-ap">Des avis et des commentaires !</h2>
         <hr>
+        <div class="container">
+            <div class="row">
+                <div></div>
+            </div>
+        </div>
     </div>
         <?php include('../partials/footer.php'); ?>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

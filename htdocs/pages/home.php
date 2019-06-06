@@ -29,9 +29,9 @@ include('../partials/Manager.php');
             <h2 class="subtitle-op">TRAVEL THE WORLD</h2>
         </header>
 
-        <h2 class="subtitle-ap">Toutes nos destination en un seul clic ! </h2>
+        <h2 class="subtitle-ap">Toutes nos destination en un seul clic !</h2>
         <hr>
-
+            
         <div class="container-fluid container-color">
             <div class="row justify-content-center">
         <?php
@@ -52,7 +52,6 @@ include('../partials/Manager.php');
                             </form>
                         </div>';
             }
-
         ?>
 
             </div>
